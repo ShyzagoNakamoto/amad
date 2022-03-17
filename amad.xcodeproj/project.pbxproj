@@ -41,7 +41,7 @@
 		FB71D5CE27E332AF00EE1729 = {
 			isa = PBXGroup;
 			children = (
-				FB71D5D927E332B000EE1729 /* amad */,
+				FB71D5D927E332B000EE1729 /* first-afl */,
 				FB71D5D827E332B000EE1729 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,13 +54,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB71D5D927E332B000EE1729 /* amad */ = {
+		FB71D5D927E332B000EE1729 /* first-afl */ = {
 			isa = PBXGroup;
 			children = (
 				FB71D5DA27E332B000EE1729 /* main.swift */,
 			);
-			path = amad;
-			sourceTree = "<group>";
+			name = "first-afl";
+			path = "/Users/shyzagonakamoto/Downloads/Kuliah/Mata Kuliah/Advanced Mobile Apps Development/amad/first-afl";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -243,6 +244,7 @@
 		FB71D5DF27E332B000EE1729 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X2Y9BAX6QL;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -254,6 +256,7 @@
 		FB71D5E027E332B000EE1729 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X2Y9BAX6QL;
 				ENABLE_HARDENED_RUNTIME = YES;
