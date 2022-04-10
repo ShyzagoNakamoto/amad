@@ -10,7 +10,11 @@ import Foundation
 var readMenu:String? = ""
 var readOrder:String? = ""
 var shoppingCart = [String]()
-var itemCount = 0
+var nasiGoreng = Cart(name: "Nasi Goreng", quantity: 0)
+var mieGoreng = Cart(name: "Mie Goreng", quantity: 0)
+var ayamGoreng = Cart(name: "Ayam Goreng", quantity: 0)
+var esTeh = Cart(name: "Es Teh", quantity: 0)
+var esJeruk = Cart(name: "Es Jeruk", quantity: 0)
 
 while(readMenu != "X"){
 	print("Point of Sales")
@@ -27,48 +31,63 @@ while(readMenu != "X"){
 			while(readOrder != "Q"){
 				print("Hi! We have 5 items on the menu for you!")
 				print("————————————————————————————————————————")
-				print("[F01]\tGado-Gado")
-				print("[F02]\tChicken Satay")
-				print("[F03]\tNasi Padang")
-				print("[B01]\tMineral Water")
-				print("[B02]\tIced Tea")
+				print("[F01]\tNasi Goreng")
+				print("[F02]\tMie Goreng")
+				print("[F03]\tAyam Goreng")
+				print("[B01]\tEs Teh")
+				print("[B02]\tEs Jeruk")
 				print("[Q]\tBack to Main Menu")
 				print("Your F&B choice?")
 				readOrder = String(readLine()!).uppercased()
 
 				switch readOrder{
-					case "F03":
-						print("How many 'Gado-Gado' you want to buy? ")
-						let quantity = Int(readLine(strippingNewline: true)!)!
-						shoppingCart.append("\(quantity) Gado-Gado.")
-					case "F02":
-						print("How many 'Chicken Satay' you want to buy? ")
-						let quantity = Int(readLine(strippingNewline: true)!)!
-						shoppingCart.append("\(quantity) Chicken Satay.")
 					case "F01":
-						print("How many 'Nasi Padang' you want to buy? ")
+						order(by: nasiGoreng.name)
 						let quantity = Int(readLine(strippingNewline: true)!)!
-						shoppingCart.append("\(quantity) Nasi Padang.")
-					case "B02":
-						print("How many 'Mineral Water' you want to buy? ")
+						nasiGoreng.order(by: quantity)
+					case "F02":
+						order(by: mieGoreng.name)
 						let quantity = Int(readLine(strippingNewline: true)!)!
-						shoppingCart.append("\(quantity) Mineral Water.")
+						mieGoreng.order(by: quantity)
+					case "F03":
+						order(by: ayamGoreng.name)
+						let quantity = Int(readLine(strippingNewline: true)!)!
+						ayamGoreng.order(by: quantity)
 					case "B01":
-						print("How many 'Iced Tea' you want to buy? ")
+						order(by: esTeh.name)
 						let quantity = Int(readLine(strippingNewline: true)!)!
-						shoppingCart.append("\(quantity) Iced Tea.")
+						esTeh.order(by: quantity)
+					case "B02":
+						order(by: esJeruk.name)
+						let quantity = Int(readLine(strippingNewline: true)!)!
+						esJeruk.order(by: quantity)
 					default:
 						print("Error, no such input is recognized.")
 						print("Back to the main menu.")
 				}
 			}
 		case "2":
-			if (shoppingCart.isEmpty){
+			var total = nasiGoreng.quantity + mieGoreng.quantity + ayamGoreng.quantity + esTeh.quantity + esJeruk.quantity
+
+			if (total == 0){
 				print("Your shopping cart is empty. Please use menu '1' to order something!")
 			} else {
-				print("Shopping Cart (\(shoppingCart.count) items):")
-				for element in shoppingCart{
-					print("\(element)")
+				print("Shopping Cart (\(total) items):")
+
+				if nasiGoreng.quantity > 0 {
+					print("\(nasiGoreng.quantity) Nasi Goreng")
+				}
+				if mieGoreng.quantity > 0 {
+					print("\(mieGoreng.quantity) Mie Goreng")
+				}
+				if ayamGoreng.quantity > 0 {
+					print("\(ayamGoreng.quantity) Ayam Goreng")
+				}
+				if esTeh.quantity > 0 {
+					print("\(esTeh.quantity) Es Teh")
+				}
+				if esJeruk.quantity > 0 {
+					print("\(esJeruk.quantity) Es Jeruk")
 				}
 			}
 		case "X":
@@ -77,4 +96,8 @@ while(readMenu != "X"){
 			print("Error, no such input is recognized.")
 			print("Back to the main menu.")
 	}
+}
+
+func order(by name: String){
+	print("How many \(name) you want to buy?")
 }

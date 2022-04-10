@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public protocol Order {
+	var quantity: Int{get}
+	func order(by quantity: Int)
+}

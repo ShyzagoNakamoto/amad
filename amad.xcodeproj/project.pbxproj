@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB657C2B2800AA3A008E9F1D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB71D5DA27E332B000EE1729 /* main.swift */; };
 		FB657C2D2800AE62008E9F1D /* cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB657C2C2800AE62008E9F1D /* cart.swift */; };
 		FB657C2F2800AE94008E9F1D /* order.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB657C2E2800AE94008E9F1D /* order.swift */; };
-		FB657C3128029BF9008E9F1D /* menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB657C3028029BF9008E9F1D /* menu.swift */; };
+		FB657C322802C839008E9F1D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB657C282800A9AF008E9F1D /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +28,6 @@
 		FB657C282800A9AF008E9F1D /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		FB657C2C2800AE62008E9F1D /* cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cart.swift; sourceTree = "<group>"; };
 		FB657C2E2800AE94008E9F1D /* order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = order.swift; sourceTree = "<group>"; };
-		FB657C3028029BF9008E9F1D /* menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu.swift; sourceTree = "<group>"; };
 		FB71D5D727E332B000EE1729 /* amad */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = amad; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB71D5DA27E332B000EE1729 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,7 +49,6 @@
 				FB657C282800A9AF008E9F1D /* main.swift */,
 				FB657C2C2800AE62008E9F1D /* cart.swift */,
 				FB657C2E2800AE94008E9F1D /* order.swift */,
-				FB657C3028029BF9008E9F1D /* menu.swift */,
 			);
 			path = "second-afl";
 			sourceTree = "<group>";
@@ -141,8 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB657C2F2800AE94008E9F1D /* order.swift in Sources */,
-				FB657C2B2800AA3A008E9F1D /* main.swift in Sources */,
-				FB657C3128029BF9008E9F1D /* menu.swift in Sources */,
+				FB657C322802C839008E9F1D /* main.swift in Sources */,
 				FB657C2D2800AE62008E9F1D /* cart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
